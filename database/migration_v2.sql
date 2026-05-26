@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `users` (
     `created_at`    DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
     UNIQUE KEY `uq_users_username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- -------------------------------------------------------------
 -- TABEL: saved_tokens
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `saved_tokens` (
         REFERENCES `units` (`id`)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- -------------------------------------------------------------
 -- SEED DATA: Akun admin default
